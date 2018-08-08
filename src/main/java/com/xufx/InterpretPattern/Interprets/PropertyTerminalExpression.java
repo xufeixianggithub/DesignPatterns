@@ -18,7 +18,7 @@ public class PropertyTerminalExpression extends ReadXmlExpression {
     public String[] interpret(Context c) {
         //直接获取最后的元素的属性的值
         String[] ss = new String[1];
-        ss[0] = c.getPreEle().getAttribute(this.propName);
+        ss[0] = c.getPreEles().get(0).getAttribute(this.propName);
         return ss;
     }
 }
